@@ -1,0 +1,367 @@
+body {
+  background: #2b1d0e;
+  font-family: 'Georgia', serif;
+  color: #f5f1e6;
+  text-align: center;
+}
+
+.about-author {
+  max-width: 760px;
+  margin: 50px auto 40px; /* sebelumnya 120px auto 100px */
+  padding: 0 36px;
+}
+
+.author-photo img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+
+  border: 2px solid rgba(214,181,108,0.6);
+}
+
+.author-name {
+  font-size: 1.97rem;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  color: #f5e7c6;
+}
+
+.author-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+
+  color: #e8d8b5;
+  margin-bottom: 22px;
+}
+
+.author-body {
+  font-size: 0.92rem;
+  line-height: 1.8;
+
+  color: rgba(245,231,198,0.75);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+
+
+.bookshelf {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 18px 18px 22px; /* LEBIH RINGKAS */
+  width: fit-content;
+
+  background: linear-gradient(to bottom, #3a2312, #2b1a0e);
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 0 #24150b,
+    0 22px 40px rgba(0,0,0,0.6);
+}
+
+
+.book {
+  width: clamp(40px, 5.5vw, 50px);
+  height: 200px; /* BASE HEIGHT */
+  background: linear-gradient(
+    to right,
+    #3b2413 0%,
+    #5a3821 15%,
+    #6b4328 50%,
+    #4a2d18 85%,
+    #2e1a0f 100%
+  );
+
+  border-radius: 4px 6px 6px 4px;
+  box-shadow:
+    inset -2px 0 4px rgba(0,0,0,0.5),
+    inset 2px 0 4px rgba(255,255,255,0.08),
+    3px 4px 10px rgba(0,0,0,0.6);
+
+  cursor: pointer;
+  position: relative;
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.book:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow:
+    inset -2px 0 4px rgba(0,0,0,0.5),
+    inset 2px 0 4px rgba(255,255,255,0.08),
+    6px 10px 20px rgba(0,0,0,0.7);
+}
+
+
+.book span {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+
+  font-size: 0.8rem;       /* DIKECILIN */
+  letter-spacing: 0.5px;  /* LEBIH RAPAT */
+  line-height: 1.2;
+
+  text-align: center;
+  white-space: nowrap;
+
+  max-height: 180px;
+  overflow: hidden;
+
+  color: #f1e3b6;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d6b56c,
+    transparent
+  );
+  opacity: 0.7;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  height: 18px;
+  border: 1px solid rgba(214,181,108,0.5);
+  border-radius: 2px;
+}
+
+.book.instagram {
+  background: linear-gradient(
+    to right,
+    #4a1d2f,
+    #7a2e4f,
+    #4a1d2f
+  );
+}
+
+.book.medium {
+  background: linear-gradient(
+    to right,
+    #1e1e1e,
+    #3a3a3a,
+    #1e1e1e
+  );
+}
+
+.book.webtoon {
+  background: linear-gradient(
+    to right,
+    #173f35,
+    #2e6b5c,
+    #173f35
+  );
+}
+
+.book.about {
+  background: linear-gradient(
+    to right,
+    #2a2a4f,
+    #4c4c88,
+    #2a2a4f
+  );
+}
+
+.book.fiction {
+  background: linear-gradient(
+    to right,
+    #2b1830,
+    #4b2a55,
+    #2b1830
+  );
+}
+
+.book.content {
+  background: linear-gradient(
+    to right,
+    #17342c,
+    #2e6b5c,
+    #17342c
+  );
+}
+
+.bookshelf {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 24px 22px 28px;
+  width: 100%;
+
+  flex-wrap: nowrap; /* desktop default */
+  overflow-x: auto;  /* mobile bisa geser */
+}
+
+.bookshelf::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bookshelf::-webkit-scrollbar-thumb {
+  background: rgba(214,181,108,0.4);
+  border-radius: 3px;
+}
+
+
+.library {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+
+  flex-wrap: wrap; /* PENTING */
+}
+
+.section {
+  flex: 1 1 420px; /* minimal width sebelum turun */
+  max-width: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245,231,198,0.7);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+
+.book-cover {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.book-cover:hover {
+  transform: translateY(-12px);
+}
+
+.book-cover img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+
+  border-radius: 8px;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.7);
+}
+
+.book-cover h3 {
+  margin-top: 14px;
+  font-size: 1rem;
+  color: #f5e7c6;
+}
+
+.book-cover span {
+  font-size: 0.8rem;
+  color: rgba(245,231,198,0.6);
+  font-style: italic;
+}
+
+.library-header {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.library-header h1 {
+  font-size: 3rem;
+  color: #f5e7c6;
+}
+
+.library-header p {
+  font-style: italic;
+  color: #d8c9a2;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: rgba(214,181,108,0.8);
+  text-decoration: none;
+}
+
+.book-preview {
+  background: rgba(42, 26, 15, 0.7);
+  backdrop-filter: blur(4px);
+
+  padding: 26px 28px;
+  border-radius: 16px;
+
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.book-preview:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.75),
+    inset 0 0 0 1px rgba(214,181,108,0.25);
+}
+
+.book-meta h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f5e7c6;
+}
+
+.book-meta span {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: rgba(214,181,108,0.7);
+}
+
+.book-snippet {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0cfaa;
+  font-style: italic;
+}
+
+.book-action {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  text-align: right;
+  color: rgba(214,181,108,0.8);
+}

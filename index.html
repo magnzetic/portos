@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Quiet Shelf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="about-author">
+
+  <div class="author-photo">
+    <img src="profile.png" alt="Author Photo">
+  </div>
+
+  <h2 class="author-name">Nabila Muthia Putri</h2>
+
+  <p class="author-lead">
+    A writer and author drawn to turning ideas and everyday experiences
+    into stories that feel familiar, yet slightly off-center.
+  </p>
+
+  <p class="author-body">
+    With a foundation in Computer Science, structure and logic quietly guide
+    the creative process, allowing stories to unfold with intention and clarity.
+    Much of the work circles themes of technology, education, and niche cultural
+    references—shaped by having more than 20 hours screen time.
+  </p>
+  
+</section>
+
+
+<div class="library">
+
+  <div class="section">
+    <div class="section-title">Fiction</div>
+
+    <div class="bookshelf">
+      <div class="book fiction" onclick="goToLibrary('narration')">
+        <span>Narration</span>
+      </div>
+      <div class="book fiction" onclick="goToLibrary('webtoon')">
+        <span>Webtoon</span>
+      </div>
+      <div class="book fiction" onclick="goToLibrary('socmed')">
+        <span>Social Media Fiction</span>
+      </div>
+      <div class="book fiction" onclick="goToLibrary('games')">
+        <span>Story Games</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Content Writing</div>
+
+    <div class="bookshelf">
+      <div class="book content" onclick="goToLibrary('sf')">
+        <span>Study First</span>
+      </div>
+      <div class="book content" onclick="goToLibrary('tbi')">
+        <span>Teman Bercerita Indonesia</span>
+      </div>
+      <div class="book content" onclick="goToLibrary('nals')">
+        <span>Nals Threads</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
