@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fluenesia Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="library-header">
+    <h1>Fluenesia</h1>
+    <p>Responsible for planning contents such as microblog and reels, copywriting and script writing, visual/audio editing, and writing caption.</p>
+    <a href="index.html" class="back-link">← back to shelf</a>
+  </div>
+
+  <div class="book-grid">
+    <div class="book-preview"
+     onclick="openLink('https://www.instagram.com/p/DYenIRDT5XX/')">
+
+     <div class="book-meta">
+      <h3>Indonesian Language Aura</h3>
+      <span>Reels · Language</span>
+     </div>
+
+     <div class="book-action">Read →</div>
+    </div>
+
+    <div class="book-preview"
+     onclick="openLink('https://www.instagram.com/p/DZUv2QTztX-/')">
+
+     <div class="book-meta">
+      <h3>Indonesian Things</h3>
+      <span>Reels · Culture</span>
+     </div>
+
+     <div class="book-action">Read →</div>
+    </div>
+
+    <div class="book-preview"
+     onclick="openLink('https://www.instagram.com/p/DaKw5dUzf7t/')">
+
+     <div class="book-meta">
+      <h3>Indonesian Habit</h3>
+      <span>Reels · Culture</span>
+     </div>
+
+     <div class="book-action">Read →</div>
+    </div>
+
+    <div class="book-preview"
+     onclick="openLink('https://www.instagram.com/p/DaX2og_Exgv/?img_index=1')">
+
+     <div class="book-meta">
+      <h3>Indonesian Phrases</h3>
+      <span>Microblog · Language</span>
+     </div>
+
+     <div class="book-action">Read →</div>
+    </div>
+
+    <div class="book-preview"
+     onclick="openLink('https://www.instagram.com/p/DasORHfTBLQ/')">
+
+     <div class="book-meta">
+      <h3>Minions Speaking Indonesian</h3>
+      <span>Reels · Language</span>
+     </div>
+
+     <div class="book-action">Read →</div>
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
