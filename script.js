@@ -20,6 +20,9 @@ function goToLibrary(type) {
   else if (type === 'fluenesia') {
     window.location.href = 'fluenesia.html';
   }
+  else if (type === 'snc') {
+    window.location.href = 'snc.html';
+  }
 }
 
 function openLink(url) {
