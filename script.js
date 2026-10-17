@@ -17,6 +17,9 @@ function goToLibrary(type) {
   else if (type === 'nals') {
     window.location.href = 'nals.html';
   }
+  else if (type === 'fluenesia') {
+    window.location.href = 'fluenesia.html';
+  }
 }
 
 function openLink(url) {
